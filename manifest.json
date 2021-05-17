@@ -1,0 +1,27 @@
+{
+  "name": "Focus lens",
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "declarativeContent",
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "scripting"
+  ],
+  "description": "Focus on the content, not the container",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "script.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["example.js"]
+    }
+  ]
+}
